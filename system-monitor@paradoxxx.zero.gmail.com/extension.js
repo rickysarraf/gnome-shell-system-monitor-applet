@@ -168,7 +168,8 @@ const smStyleManager = new Lang.Class({
     Name: 'SystemMonitor.smStyleManager',
     _extension: '',
     _iconsize: 1,
-    _diskunits: _('MiB/s'),
+    //_diskunits: _('MiB/s'),
+    _diskunits: _(''),
     _netunits_kbytes: _('KiB/s'),
     _netunits_mbytes: _('MiB/s'),
     _netunits_kbits : 'kbps',
@@ -1322,10 +1323,10 @@ const Disk = new Lang.Class({
         this.menu_items[3].text = this.text_items[4].text = this.tip_vals[1].toString();
     },
     create_text_items: function() {
-        return [new St.Label({ text: _('R'), style_class: Style.get("sm-status-label")}),
+        return [new St.Label({ text: _('R⬤'), style_class: Style.get("sm-status-label")}),
                 new St.Label({ style_class: Style.get("sm-disk-value")}),
                 new St.Label({ text: Style.diskunits(), style_class: Style.get("sm-disk-unit-label")}),
-                new St.Label({ text: _('W'), style_class: Style.get("sm-status-label")}),
+                new St.Label({ text: _('W⬤'), style_class: Style.get("sm-status-label")}),
                 new St.Label({ style_class: Style.get("sm-disk-value")}),
                 new St.Label({ text: Style.diskunits(), style_class: Style.get("sm-disk-unit-label")})];
     },
